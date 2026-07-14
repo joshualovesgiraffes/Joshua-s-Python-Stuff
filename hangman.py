@@ -8,13 +8,43 @@ print("|   Welcome to   |")
 print("|     Hangman    |")
 print("------------------")
 
-words = ("hangman")
-
+words = ["hangman"]
 word = random.choice(words)
 
-while attempts > 0:
-    guess = input("Guess a letter: ")
+word = "hangman"
 
-if guess in word:
-    print(f"{guess} was in word!")
+length = len(word)
+display = ["_"] * length
+
+number_of_incorrect = 0
+number_of_correct = 0
+
+while True:
+    if number_of_correct == length:
+        print("Congratulations! You guessed the word: " + word)
+        input("Press ENTER to exit.")
+        sys.exit()
+    if number_of_incorrect == 10:
+        print("You have run out of guesses. The word was: " + word)
+        input("Press ENTER to exit.")
+        sys.exit()
+    guess = input("Guess a letter: ").lower()
+
+    if guess not in word:
+        print(f"{guess} was not in the word.")
+        number_of_incorrect += 1
+
+    if guess in word:
+        number_of_correct += 1
+        positions = [i for i, letter in enumerate(word) if letter == guess]
+        for pos in positions:
+            display[pos] = guess
+        print(f"{guess} was in the word!")
+        print("")
+        print("".join(display))
+        print("")
+
+    
+
+
 
