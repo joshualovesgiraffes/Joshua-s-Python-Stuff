@@ -8,19 +8,19 @@ print("|   Welcome to   |")
 print("|     Hangman    |")
 print("------------------")
 
-words = ["hangman"]
+words = ["hangman", "hello", "health", "experience", "table", "chair", "computer", "giraffes"]
 word = random.choice(words)
-
-word = "hangman"
 
 length = len(word)
 display = ["_"] * length
+
+length = len(word) - 1
 
 number_of_incorrect = 0
 number_of_correct = 0
 
 while True:
-    if number_of_correct == length:
+    if number_of_correct == length - 1:
         print("Congratulations! You guessed the word: " + word)
         input("Press ENTER to exit.")
         sys.exit()
