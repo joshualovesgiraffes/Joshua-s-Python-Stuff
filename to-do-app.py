@@ -1,4 +1,4 @@
-from colorist import red
+
 
 line01 = "*************************"  # header / footer
 line02 = "*                       *"  # re-use
@@ -19,7 +19,7 @@ print(line02)
 print(line01)
 print('')  # ends with blank
 
-red("!! TASKS DO NOT SAVE. KEEP APPLICATION OPEN !!")
+print("!! TASKS DO NOT SAVE. KEEP APPLICATION OPEN !!")
 print("")
 tasks = []
 
@@ -48,4 +48,4 @@ while True:
         print("Invalid choice. Please try again.")
         print("")
 
-# Rest of your code
+
