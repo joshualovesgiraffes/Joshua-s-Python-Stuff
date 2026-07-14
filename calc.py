@@ -12,7 +12,7 @@ while True:
     symboloptions = ("+", "-", "x", "/")
 
     while symbolchoice not in symboloptions:
-        print(colored("Please enter a valid symbol.", "yellow"))
+        print("Please enter a valid symbol.")
         symbolchoice = input("What is your operation today? (+, -, x, /): ")
 
 

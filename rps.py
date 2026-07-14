@@ -15,7 +15,7 @@ while True:
     player = input("Enter a choice (rock, paper, scissors, abort): ")
 
     while player not in options:
-        print(colored("Please enter a valid input.", "yellow"))
+        print("Please enter a valid input.")
         player = input("Enter a choice (rock, paper, scissors, abort): ")
 
     # idk why i added this, idk a failsafe i guess
@@ -26,7 +26,7 @@ while True:
             sys.exit()
 
     if player == 'abort':
-        abort = input("Press ENTER to confirm abort.", "red")
+        abort = input("Press ENTER to confirm abort.")
 
     if abort == "":
             sys.exit()

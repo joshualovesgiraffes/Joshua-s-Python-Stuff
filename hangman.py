@@ -1,4 +1,4 @@
-from termcolor import colored
+
 import random
 import sys
 import os
