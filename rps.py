@@ -27,9 +27,9 @@ while True:
 
     if player == 'abort':
         abort = input("Press ENTER to confirm abort.")
-
-    if abort == "":
+        if abort == "":
             sys.exit()
+
 
     if player != "abort" and computer in options:
         print("")
