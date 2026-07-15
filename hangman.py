@@ -43,8 +43,3 @@ while True:
         print("")
         print("".join(display))
         print("")
-
-    
-
-
-
