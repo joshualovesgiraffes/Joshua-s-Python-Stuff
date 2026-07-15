@@ -14,17 +14,11 @@ word = random.choice(words)
 length = len(word)
 display = ["_"] * length
 
-length = len(word) - 1
-
 number_of_incorrect = 0
 number_of_correct = 0
 
 while True:
-    if number_of_correct == length - 1:
-        print("Congratulations! You guessed the word: " + word)
-        input("Press ENTER to exit.")
-        sys.exit()
-    if number_of_incorrect == 10:
+    if number_of_incorrect == 9:
         print("You have run out of guesses. The word was: " + word)
         input("Press ENTER to exit.")
         sys.exit()
@@ -43,3 +37,7 @@ while True:
         print("")
         print("".join(display))
         print("")
+        if "".join(display) == word:
+            print("Congratulations! You guessed the word: " + word)
+            input("Press ENTER to exit.")
+            sys.exit()
