@@ -1,5 +1,6 @@
 import sys
 import random
+import os
 
 computerchoice = random.randint(1, 100)
 computerchoiceint = int(computerchoice)
@@ -19,8 +20,25 @@ while True:
     if playerchoiceint == computerchoiceint:
         print("🎉 You got it!")
         print("Computers choice: " + str(computerchoice))
-        input("Press ENTER to exit.")
-        sys.exit()
+        print()
+        again = input("Do you want to play Guess Number again? (y/n): ").strip().lower()
+        if again == "y":
+            os.system('cls')
+            continue
+        elif again == "n":
+            sys.exit()
+        else:
+            print()
+            print("Please enter 'y' or 'n'.")
+            print()
+            again = input("Do you want to play Guess Number again? (y/n): ").strip().lower()
+            if again == "y":
+                os.system('cls')
+                continue
+            elif again == "n":
+                sys.exit()
+            else:
+                sys.exit()
     else:
         if playerchoiceint > computerchoiceint:
             print("Your number is too high.")

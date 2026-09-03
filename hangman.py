@@ -24,6 +24,11 @@ while True:
         sys.exit()
     guess = input("Guess a letter: ").lower()
 
+    if guess == word:
+        print("Congratulations! You guessed the word: " + word)
+        input("Press ENTER to exit.")
+        sys.exit()
+
     if guess not in word:
         print(f"{guess} was not in the word.")
         number_of_incorrect += 1
