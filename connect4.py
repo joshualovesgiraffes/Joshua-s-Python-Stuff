@@ -62,7 +62,7 @@ def win_confirm(x_win):
     return
 
 def play_again(board):
-    again = input("Do you want to play Rock Paper Scissors again? (y/n): ").strip().lower()
+    again = input("Do you want to play Connect 4 again? (y/n): ").strip().lower()
     if again == "y":
         return
     elif again == "n":
@@ -71,7 +71,7 @@ def play_again(board):
         print()
         print("Please enter 'y' or 'n'.")
         print()
-        again = input("Do you want to play Rock Paper Scissors again? (y/n): ").strip().lower()
+        again = input("Do you want to play Connect 4 again? (y/n): ").strip().lower()
         if again == "y":
             return
         elif again == "n":
